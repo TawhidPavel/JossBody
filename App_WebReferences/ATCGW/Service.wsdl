@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AirtelCGW_Process">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AirtelCGW_ProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AirtelCGW_ProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_Exist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_ExistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ATCZ_ExistResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleContentChargingChk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContentCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleContentChargingChkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleContentChargingChkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_Enrty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HS_Model" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HS_Manu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_EnrtyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ATCZ_DownloadEnrty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaidContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portal_Name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_DownloadEnrtyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ATCZ_FirstWeekFreeSubEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_FirstWeekFreeSubEntryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ATCZ_FirstWeekFreeChk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_FirstWeekFreeChkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ATCZ_FirstWeekFreeChkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkATCZSubscriberStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkATCZSubscriberStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChkATCZSubscriberStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadCountSubscriber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadCountSubscriberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadCountSubscriberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_DeactivateSubscriberStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_DeactivateSubscriberStatusResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ATCZ_PortalSubscriptionCHG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATCZ_PortalSubscriptionCHGResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AirtelCGW_ProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:AirtelCGW_Process" />
+  </wsdl:message>
+  <wsdl:message name="AirtelCGW_ProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:AirtelCGW_ProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_ExistSoapIn">
+    <wsdl:part name="parameters" element="tns:ATCZ_Exist" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_ExistSoapOut">
+    <wsdl:part name="parameters" element="tns:ATCZ_ExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoubleContentChargingChkSoapIn">
+    <wsdl:part name="parameters" element="tns:DoubleContentChargingChk" />
+  </wsdl:message>
+  <wsdl:message name="DoubleContentChargingChkSoapOut">
+    <wsdl:part name="parameters" element="tns:DoubleContentChargingChkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_EnrtySoapIn">
+    <wsdl:part name="parameters" element="tns:ATCZ_Enrty" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_EnrtySoapOut">
+    <wsdl:part name="parameters" element="tns:ATCZ_EnrtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_DownloadEnrtySoapIn">
+    <wsdl:part name="parameters" element="tns:ATCZ_DownloadEnrty" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_DownloadEnrtySoapOut">
+    <wsdl:part name="parameters" element="tns:ATCZ_DownloadEnrtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_FirstWeekFreeSubEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:ATCZ_FirstWeekFreeSubEntry" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_FirstWeekFreeSubEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:ATCZ_FirstWeekFreeSubEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_FirstWeekFreeChkSoapIn">
+    <wsdl:part name="parameters" element="tns:ATCZ_FirstWeekFreeChk" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_FirstWeekFreeChkSoapOut">
+    <wsdl:part name="parameters" element="tns:ATCZ_FirstWeekFreeChkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChkATCZSubscriberStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ChkATCZSubscriberStatus" />
+  </wsdl:message>
+  <wsdl:message name="ChkATCZSubscriberStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ChkATCZSubscriberStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadCountSubscriberSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadCountSubscriber" />
+  </wsdl:message>
+  <wsdl:message name="DownloadCountSubscriberSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadCountSubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_DeactivateSubscriberStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ATCZ_DeactivateSubscriberStatus" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_DeactivateSubscriberStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ATCZ_DeactivateSubscriberStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_PortalSubscriptionCHGSoapIn">
+    <wsdl:part name="parameters" element="tns:ATCZ_PortalSubscriptionCHG" />
+  </wsdl:message>
+  <wsdl:message name="ATCZ_PortalSubscriptionCHGSoapOut">
+    <wsdl:part name="parameters" element="tns:ATCZ_PortalSubscriptionCHGResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="AirtelCGW_Process">
+      <wsdl:input message="tns:AirtelCGW_ProcessSoapIn" />
+      <wsdl:output message="tns:AirtelCGW_ProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_Exist">
+      <wsdl:input message="tns:ATCZ_ExistSoapIn" />
+      <wsdl:output message="tns:ATCZ_ExistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleContentChargingChk">
+      <wsdl:input message="tns:DoubleContentChargingChkSoapIn" />
+      <wsdl:output message="tns:DoubleContentChargingChkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_Enrty">
+      <wsdl:input message="tns:ATCZ_EnrtySoapIn" />
+      <wsdl:output message="tns:ATCZ_EnrtySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_DownloadEnrty">
+      <wsdl:input message="tns:ATCZ_DownloadEnrtySoapIn" />
+      <wsdl:output message="tns:ATCZ_DownloadEnrtySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_FirstWeekFreeSubEntry">
+      <wsdl:input message="tns:ATCZ_FirstWeekFreeSubEntrySoapIn" />
+      <wsdl:output message="tns:ATCZ_FirstWeekFreeSubEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_FirstWeekFreeChk">
+      <wsdl:input message="tns:ATCZ_FirstWeekFreeChkSoapIn" />
+      <wsdl:output message="tns:ATCZ_FirstWeekFreeChkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkATCZSubscriberStatus">
+      <wsdl:input message="tns:ChkATCZSubscriberStatusSoapIn" />
+      <wsdl:output message="tns:ChkATCZSubscriberStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadCountSubscriber">
+      <wsdl:input message="tns:DownloadCountSubscriberSoapIn" />
+      <wsdl:output message="tns:DownloadCountSubscriberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_DeactivateSubscriberStatus">
+      <wsdl:input message="tns:ATCZ_DeactivateSubscriberStatusSoapIn" />
+      <wsdl:output message="tns:ATCZ_DeactivateSubscriberStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_PortalSubscriptionCHG">
+      <wsdl:input message="tns:ATCZ_PortalSubscriptionCHGSoapIn" />
+      <wsdl:output message="tns:ATCZ_PortalSubscriptionCHGSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AirtelCGW_Process">
+      <soap:operation soapAction="http://tempuri.org/AirtelCGW_Process" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_Exist">
+      <soap:operation soapAction="http://tempuri.org/ATCZ_Exist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleContentChargingChk">
+      <soap:operation soapAction="http://tempuri.org/DoubleContentChargingChk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_Enrty">
+      <soap:operation soapAction="http://tempuri.org/ATCZ_Enrty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_DownloadEnrty">
+      <soap:operation soapAction="http://tempuri.org/ATCZ_DownloadEnrty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_FirstWeekFreeSubEntry">
+      <soap:operation soapAction="http://tempuri.org/ATCZ_FirstWeekFreeSubEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_FirstWeekFreeChk">
+      <soap:operation soapAction="http://tempuri.org/ATCZ_FirstWeekFreeChk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkATCZSubscriberStatus">
+      <soap:operation soapAction="http://tempuri.org/ChkATCZSubscriberStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadCountSubscriber">
+      <soap:operation soapAction="http://tempuri.org/DownloadCountSubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_DeactivateSubscriberStatus">
+      <soap:operation soapAction="http://tempuri.org/ATCZ_DeactivateSubscriberStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_PortalSubscriptionCHG">
+      <soap:operation soapAction="http://tempuri.org/ATCZ_PortalSubscriptionCHG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AirtelCGW_Process">
+      <soap12:operation soapAction="http://tempuri.org/AirtelCGW_Process" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_Exist">
+      <soap12:operation soapAction="http://tempuri.org/ATCZ_Exist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleContentChargingChk">
+      <soap12:operation soapAction="http://tempuri.org/DoubleContentChargingChk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_Enrty">
+      <soap12:operation soapAction="http://tempuri.org/ATCZ_Enrty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_DownloadEnrty">
+      <soap12:operation soapAction="http://tempuri.org/ATCZ_DownloadEnrty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_FirstWeekFreeSubEntry">
+      <soap12:operation soapAction="http://tempuri.org/ATCZ_FirstWeekFreeSubEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_FirstWeekFreeChk">
+      <soap12:operation soapAction="http://tempuri.org/ATCZ_FirstWeekFreeChk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkATCZSubscriberStatus">
+      <soap12:operation soapAction="http://tempuri.org/ChkATCZSubscriberStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadCountSubscriber">
+      <soap12:operation soapAction="http://tempuri.org/DownloadCountSubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_DeactivateSubscriberStatus">
+      <soap12:operation soapAction="http://tempuri.org/ATCZ_DeactivateSubscriberStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATCZ_PortalSubscriptionCHG">
+      <soap12:operation soapAction="http://tempuri.org/ATCZ_PortalSubscriptionCHG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.10.25/airtelcgw/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.10.25/airtelcgw/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
